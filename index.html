@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <title>визитка</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/css-hamburgers/hamburgers.css">
+    <link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
 </head>
 <body>
 
-<div class="container">
-    
-<header>
-    <span class="logo">"ИП Сатемиров Т.Б."</span>
-    <span class="adress"><i class="fa fa-map-marker" aria-hidden="true"></i> г.Костанай ул.Тарана</span>
-    <span class="nomber"><i class="fa fa-mobile" aria-hidden="true"></i> +7(701)-458-47-52</span>
-</header>
 
-<section>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis sit porro consectetur corporis ipsum.</h1>
-</section>
-
-<foter>
-    
-</foter>
-    
+<div id="my-page">
+      <div id="my-header">
+          
+          <header class="site-header">
+              <a href="#" class="logo"><img src="img/logo.svg" alt="джанго"></a>
+              <div class="phone"><i class="fa fa-mobile"></i> +7 (777) 555-44-33</div>
+              <a href="#my-menu" class="hamburger hamburger--emphatic ">
+                    <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+              </a>
+              
+              <div id="my-menu">
+                  <ul>
+                      <li><a href="#">пункт1</a></li>
+                      <li class="active"><a href="#">пункт2</a></li>
+                      <li><a href="#">пункт3</a></li>
+                      <li><a href="#">пункт4</a></li>
+                      <li><a href="#">пункт5</a></li>
+                  </ul>
+              </div>
+          </header>
+          
+      </div>
+      <div id="my-content"></div>
+      <div id="my-footer"></div>
 </div>
+
+
 
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery.backgroundvideo.min.js"></script>
+<script src="libs/mmenu/jquery.mmenu.all.min.js"></script>
 <script>
   $(document).ready(function() {
     var videobackground = new $.backgroundVideo($('body'), {
