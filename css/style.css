@@ -1,0 +1,21 @@
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-content: center;
+}
+header span {
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
