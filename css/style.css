@@ -1,103 +1,200 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
 	line-height: 1;
+    font-family: Fira Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff !important;
 }
-ol, ul {
-	list-style: none;
+
+/********************** шрифты *****************/
+
+
+@font-face {
+    font-family: "FiraSansRegular";
+    src: url("../fonts/FiraSansRegular/FiraSansRegular.eot");
+    src: url("../fonts/FiraSansRegular/FiraSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/FiraSansRegular/FiraSansRegular.woff") format("woff"),
+    url("../fonts/FiraSansRegular/FiraSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+@font-face {
+    font-family: "RalewayRegular";
+    src: url("../fonts/RalewayRegular/RalewayRegular.eot");
+    src: url("../fonts/RalewayRegular/RalewayRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/RalewayRegular/RalewayRegular.woff") format("woff"),
+    url("../fonts/RalewayRegular/RalewayRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 
-/**********************reset end*****************/
 
+/********************** дополнительно **********************/
 
-@font face{
-    font-family: Fira Sans;
-    src: url(font/Fira Sans/FiraSans-Regular.eot);
-    src: url(font/Fira Sans/FiraSans-Regular.ttf);
-    src: url(font/Fira Sans/FiraSans-Regular.woff);
+.h1, .h2, .h3, .h4, .h5, .h6{
+    line-height: 1.4;
+    text-transform: uppercase;
 }
-
 
 .site-header{
+    height: 100vh;
+}
+.my-header{
+    position: relative;
+}
+section, header{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+/********************** header **********************/
+.top-line {
     padding-top: 40px;
     position: absolute;
     width: 100%;
     z-index: 1;
-    color: #fff;
 }
 
-.logo img{
+.top-line .logo img{
     width: 125px;
     height: auto;
     margin-left: 45px;
 }
 
-.phone{
+.top-line .phone{
     position: absolute;
     right: 85px;
     top: 44px;
-    font-family: Fira Sans, sans-serif;
+    font-family: "FiraSansRegular";
     font-size: 22px;
     white-space: nowrap;
+    color: #fff;
 }
 
-.phone .fa{
-    color: #555;
+.top-line .phone .fa{
     font-size: 22px;
+    color: #555;
     margin-right: 3px;
 }
 
-.hamburger{
-    right:0px;
+.top-line .hamburger{
+    right: 0;
     position: absolute;
-    top: 27px;
+    top: 30px;
 }
 
-.hamburger .hamburger-box{
-    width: 26px;
+.mm-title img {
+    width: 128px;
+    height: auto;
+    margin: 10px 0 35px;
 }
-.hamburger .hamburger-box .hamburger-inner, .hamburger-inner:before, .hamburger-inner:afer !important{
-    background: #fff;
-    border-radius: 0px;
+
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview>li.mm-selected>span{
+    background-color: transparent;
+    color: #092E20;
 }
+
+.mm-listview > li.active{
+    color: #092E20;
+    background: none;
+}
+
+#my-menu .fa{
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+
+
+.button{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    color: #FFC867;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #FFC867;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    transition: color 0.3s ease-out;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 300px;
+    height: 300px;
+    left: -75px;
+    transition: box-shadow 0.6s ease-out;
+    z-index: -1;
+}
+
+.button:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:hover::before{
+    box-shadow: inset 0 0 0 160px #FFC867;
+}
+
+.header-composition{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header-composition-center{
+    position: absolute;
+    width: 60%;
+}
+.header-composition .header-composition-center .h1{
+    font-size: 40px;
+}
+
+.header-composition .header-composition-center .h1 span{
+    color: #FFC867;
+}
+
+.header-composition .header-composition-center p{
+    margin-bottom: 50px;
+}
+
+.header-social{
+    position: absolute;
+    bottom: 0;
+    justify-content:space-around;
+    width: 100%;
+    display: flex;
+    border-top: rgba(255,255,255, 0.15) 1px solid; 
+    padding: 12.5px 0;
+    font-family: RalewayRegular;
+    font-size: 16px;
+    background-color: rgba(21,21,21, 0.15);
+}
+
+.header-social .fa{
+    margin-right: 5px;
+    color: #555;
+}
+
+
+

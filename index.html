@@ -4,45 +4,67 @@
     <meta charset="UTF-8">
     <title>визитка</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="libs/font-awesome/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/css-hamburgers/hamburgers.css">
+    <link rel="stylesheet" href="libs/bootsrap-grid/bootstrap.css">
     <link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/css-hamburgers/hamburgers.css">
 </head>
 <body>
 
-
 <div id="my-page">
-      <div id="my-header">
-          
-          <header class="site-header">
-              <a href="#" class="logo"><img src="img/logo.svg" alt="джанго"></a>
-              <div class="phone"><i class="fa fa-mobile"></i> +7 (777) 555-44-33</div>
-              <a href="#my-menu" class="hamburger hamburger--emphatic ">
+    <div id="my-header">
+        <header class="site-header">
+            <div class="top-line">
+                <a href="#" class="logo"><img src="img/logo1.svg" alt="логотип"></a>
+                <div class="phone"><i class="fa fa-mobile" aria-hidden="true"></i> +7 (701) 342-12-23</div>
+                <a href="#my-menu" class="hamburger hamburger--emphatic">
                     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-              </a>
-              
-              <div id="my-menu">
-                  <ul>
-                      <li><a href="#">пункт1</a></li>
-                      <li class="active"><a href="#">пункт2</a></li>
-                      <li><a href="#">пункт3</a></li>
-                      <li><a href="#">пункт4</a></li>
-                      <li><a href="#">пункт5</a></li>
-                  </ul>
-              </div>
-          </header>
+                </a>
+
+                <nav id="my-menu">
+                    <ul>
+                        <li><a href="page.html"><i class="fa fa-home"></i>Главная</a></li>
+                        <li><a href="#"><i class="fa fa-tree"></i>О компании</a></li>
+                        <li><a href="#"><i class="fa fa-sliders"></i>Галерея</a></li>
+                        <li><a href="#"><i class="fa fa-star-o"></i>Преимущества</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i>Контакты</a></li>
+                    </ul>
+                </nav>
+        </div>
           
-      </div>
-      <div id="my-content"></div>
-      <div id="my-footer"></div>
+        <div class="header-composition">
+            <div class="header-composition-center">
+                <h1 class="h1">проектирование и нормирование в области <span>экологии</span> </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis enim quae deserunt aut ex! Repellendus unde optio minus dolores fuga nam exercitationem, ullam doloremque officia labore laboriosam totam quas.</p>
+                <a href="#" class="button">оставить заявку</a>
+            </div>
+        </div>
+        
+        <div class="header-social">
+            
+                    
+                        <span><i class="fa fa-location-arrow"></i>г. Костанай, ул.Тарана, 155 каб.33</span>
+                    
+                    
+                        <span><i class="fa fa-mobile"></i>+7 (777) 327-02-65</span>
+                    
+                    
+                        <span><i class="fa fa-clock-o"></i>Время работы: ежудневно: 10:00 - 22:00</span>
+                    
+               
+        </div>               
+                    
+                          
+           
+       
+        </header>
+    </div>
 </div>
 
-
-
-
 <script src="js/jquery.js"></script>
-<script src="js/jquery.backgroundvideo.min.js"></script>
 <script src="libs/mmenu/jquery.mmenu.all.min.js"></script>
+<script src="js/jquery.backgroundvideo.min.js"></script>
+<script src="js/script.js"></script>
 <script>
   $(document).ready(function() {
     var videobackground = new $.backgroundVideo($('body'), {
@@ -50,7 +72,7 @@
       "width": 1280,
       "height": 720,
       "path": "video/",
-      "filename": "Forest-Lullaby",
+      "filename": "Sky-High",
       "types": ["mp4","ogg","webm"],
       "preload": true,
       "autoplay": true,
