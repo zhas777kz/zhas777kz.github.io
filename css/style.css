@@ -196,5 +196,16 @@ section, header{
     color: #555;
 }
 
+@media screen and (max-width: 320px) {
+    .header-composition .header-composition-center .h1{
+        font-size: 20px;
+}
+    .header-composition{
+        height: 60%;
+    }
+    .header-composition-center{
+        width: 90%;
+    }
+}
 
 
