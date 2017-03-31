@@ -206,6 +206,10 @@ section, header{
     .header-composition-center{
         width: 90%;
     }
+    .button{
+        width: 100px;
+        height: 30px;
+    }
 }
 
 
