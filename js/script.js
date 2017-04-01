@@ -1,19 +1,22 @@
-$(function(){
- $('#my-menu').mmenu({
-       extensions: ['theme-black', 'effct-menu-slide', 'pagedim-black'],
-       navbar:{
-           title: '<img src="img/logo1.svg" alt="логотип"'
-       },
-       offCanvas: {
-           position:'right'
-       }
-   }); 
-    
-    var api = $('#my-menu').data('mmenu');
-    api.bind('open:finish', function(){
-        $('.hamburger').addClass('is-active');
-    });
-    api.bind('close:finish', function(){
-        $('.hamburger').removeClass('is-active');
+$(document).ready(function () {
+    $("form").submit(function () {
+        // Получение ID формы
+        var formID = $(this).attr('id');
+        // Добавление решётки к имени ID
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'mail.php',
+            data: formNm.serialize(),
+            success: function (data) {
+                // Вывод текста результата отправки
+                $(formNm).html(data); 
+            },
+            error: function (jqXHR, text, error) {
+                // Вывод текста ошибки отправки
+                $(formNm).html(error);         
+            }
+        });
+        return false;
     });
 });
