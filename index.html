@@ -1,53 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title></title>
-<meta name='author' content='Дмитрий Давыдов' />
-<meta name='copyright' content='2015 - Smartlanding.biz' />
-
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="css/remodal.css">
- <link rel="stylesheet" href="css/remodal-default-theme.css">
- <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="jquery.fullPage.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,600" rel="stylesheet">
 </head>
 <body>
+	<!--preloader-->
+	
+<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
 
-<div class="home">
-  <p><a class="mainButton" href="#modal">Оставить заявку</a></p>
-</div>
+	<!--fullpage-->
+	<div id="fullpage">
+		<div class="section" id="section0"><h1>тракт ойл см</h1></div>
+		<div class="section" id="section1">
+			<div class="container">
+				<h2 class="company-h2">о компании</h2>
+				<p class="company-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus praesentium nulla adipisci delectus dignissimos aliquid laborum quasi est repudiandae, dicta, nemo necessitatibus unde deserunt nisi atque, dolor. Velit, deserunt, ut!</p>
+				<div class="company-wrapper">
+					<div class="company-img"></div>
+					<div class="company-text"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section2"><h1>Наши услуги</h1></div>
+		<div class="section" id="section3"><h1>Каталог</h1></div>
+		<div class="section" id="section4"><h1>Где купить</h1></div>
+		<div class="section" id="section5"><h1>Сотрудники</h1></div>
+		<div class="section" id="section6"><h1>Сертификаты</h1></div>
+		<div class="section" id="section7"><h1>Наши бренды</h1></div>
+		<div class="section" id="section8">
+			<div class="container">
+				<h2 class="contact-h2">контакты</h2>
+				<div class="contact-wrapper">
+					<div class="contact-text">
+						<div class="office">
+							<h3>офис</h3>
+							<p><strong>Адрес:</strong><br>г. Костанай, ул. Тарана 155 каб.34</p>
+							<p><strong>Телефон:</strong><br>+7 (705) 564-87-52</p>
+							<p><strong>E-mail:</strong><br>zhas777kz@gmail.com</p>
+							<p><strong>Время работы:</strong><br>Пн-Пт: 9:00 - 18:00 / Сб-Вс: выходной</p>
+						</div>
+						<div class="magazine">
+							<h3>магазин</h3>
+							<p><strong>Адрес</strong><br>г. Костанай, ул. Тарана 155 каб.34</p>
+							<p><strong>Телефон</strong><br>+7 (705) 564-87-52</p>
+							<p><strong>E-mail</strong><br>zhas777kz@gmail.com</p>
+							<p><strong>Время работы:</strong><br>Пн-Пт: 9:00 - 18:00 / Сб-Вс: выходной</p>
+						</div>
+					</div>
+					<div id="map" class="contact-map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
- <div class="remodalBorder">
-  <p><img src="img/sendico.png"></p>
-  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-      <form id="form">
-        <h2 id="modal1Title">Оставьте ваши контактные данные и наш консультант свяжется <br>с вами</h2>
-        <input type="text" class="putName" name="name" placeholder="Ваше ваше имя" required>
-        <input name="phone" type="tel" class="putPhone" placeholder="Введите номер телефона" required>
-        <input type="submit" name="submit" class="btn" value="ОТПРАВИТЬ">
-        <input type="hidden" name="formData" value="Заявка с сайта">
-        <p style="margin:0;"><a style="font-size:12px; text-align:center; color:rgba(255, 255, 255, .3);" href="http://smartlanding.biz/ajax-forma-v-modalnom-okne.html">Хочу такую форму на свой сайт</a></p>
-    </form>
-</div>
-</div>
 
-<div class="home">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reprehenderit id aliquid nihil fuga at quidem aliquam, dolorem aut dolores beatae aperiam facilis molestiae totam, itaque numquam quo, earum optio.50</p>
-</div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/remodal.min.js"></script>
-<script src="js/script.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.fullPage.min.js"></script>
+ <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['Главная', 'О компании', 'Наши услуги', 'Каталог', 'Где купить','Сотрудники', 'Сертификаты', 'Наши бренды', 'контакты' ],
+				sectionsColor: ['#2E3037', '#2E3037', '#2E3037','#2E3037','#2E3037','#2E3037','#2E3037','#2E3037','#2E3037'],
+				navigation: true,
+				navigationPosition: 'left',
+				navigationTooltips: ['Главная', 'О компании', 'Наши услуги', 'Каталог', 'Где купить','Сотрудники', 'Сертификаты', 'Наши бренды', 'контакты']
+			});
+		});
+	</script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>	
+<script src="script.js"></script>
 </body>
 </html>
