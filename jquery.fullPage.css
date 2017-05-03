@@ -1,3 +1,5 @@
+
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
@@ -16,6 +18,8 @@ html.fp-enabled,
 }
 #superContainer {
     height: 100%;
+
+    
     position: relative;
 
     /* Touch detection for Windows 8 */
@@ -105,16 +109,15 @@ html.fp-enabled,
 #fp-nav {
     position: fixed;
     z-index: 100;
-    margin-top: -32px;
-    top: 50%;
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
+    top: 50%;
 }
+
 #fp-nav.right {
-    right: 17px;
+    right: 15px;
 }
 #fp-nav.left {
-    left: 17px;
+    left: 15px;
 }
 .fp-slidesNav{
     position: absolute;
@@ -139,7 +142,8 @@ html.fp-enabled,
 }
 #fp-nav ul li,
 .fp-slidesNav ul li {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 14px;
     height: 13px;
     margin: 12px 10px;
@@ -148,8 +152,8 @@ html.fp-enabled,
 }
 .fp-slidesNav ul li {
     display: inline-block;
-
 }
+
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
     display: block;
@@ -167,13 +171,13 @@ html.fp-enabled,
 .fp-slidesNav ul li:hover a.active span{
     height: 12px;
     width: 12px;
-    border: 2px solid #FC5F45; 
+    border: 2px solid #E9573E; 
     border-radius: 100%;
-    background: #FC5F45;
+    background: #E9573E;
  }
  #fp-nav ul li a.active span::before{
     content: '';
-    border: 1px solid #FC5F45;
+    border: 1px solid #E9573E;
     width: 22px;
     height: 22px;
     position: absolute;
@@ -181,6 +185,86 @@ html.fp-enabled,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+ }
+ #fp-nav ul li:nth-child(1) a.active span{
+    border: 2px solid #E9573E; 
+    background: #E9573E;
+ }
+
+ #fp-nav ul li:nth-child(1) a.active span::before{
+    border: 1px solid #FB6E52;
+ }
+
+ #fp-nav ul li:nth-child(2) a.active span{
+    border: 2px solid #DB4453; 
+    background: #DB4453;
+ }
+
+ #fp-nav ul li:nth-child(2) a.active span::before{
+    border: 1px solid #ED5564;
+ }
+
+ #fp-nav ul li:nth-child(3) a.active span{
+    border: 2px solid #8CC051; 
+    background: #8CC051;
+ }
+
+ #fp-nav ul li:nth-child(3) a.active span::before{
+    border: 1px solid #A0D468;
+ }
+
+ #fp-nav ul li:nth-child(4) a.active span{
+    border: 2px solid #F6BB43; 
+    background: #F6BB43;
+ }
+
+ #fp-nav ul li:nth-child(4) a.active span::before{
+    border: 1px solid #FFCE55;
+ } 
+
+ #fp-nav ul li:nth-child(5) a.active span{
+    border: 2px solid #3BAEDA; 
+    background: #3BAEDA;
+ }
+
+ #fp-nav ul li:nth-child(5) a.active span::before{
+    border: 1px solid #4FC0E8;
+ } 
+
+#fp-nav ul li:nth-child(6) a.active span{
+    border: 2px solid #36BC9B; 
+    background: #36BC9B;
+ }
+
+ #fp-nav ul li:nth-child(6) a.active span::before{
+    border: 1px solid #48CFAE;
+ }
+
+#fp-nav ul li:nth-child(7) a.active span{
+    border: 2px solid #D870AD; 
+    background: #D870AD;
+ }
+
+ #fp-nav ul li:nth-child(7) a.active span::before{
+    border: 1px solid #EC87BF;
+ }
+
+ #fp-nav ul li:nth-child(8) a.active span{
+    border: 2px solid #967BDC; 
+    background: #967BDC;
+ }
+
+ #fp-nav ul li:nth-child(8) a.active span::before{
+    border: 1px solid #AC92ED;
+ }
+
+ #fp-nav ul li:nth-child(9) a.active span{
+    border: 2px solid #4B89DC; 
+    background: #4B89DC;
+ }
+
+ #fp-nav ul li:nth-child(9) a.active span::before{
+    border: 1px solid #5D9CEC;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -199,8 +283,7 @@ html.fp-enabled,
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span{
+#fp-nav ul li:hover a span{
     background: rgba(255,255,255, 0.2);
 }
 #fp-nav ul li:hover a span::before{
@@ -214,19 +297,22 @@ html.fp-enabled,
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: 1px;
+    top: 50%;
     margin-left: 15px;
     color: #fff;
-    font-size: 18px;
+    font-size: 13px;
+    text-transform: uppercase;
     font-weight: 600;
     font-family: 'Exo 2', sans-serif;
     white-space: nowrap;
     max-width: 220px;
     display: block;
     opacity: 0;
-    width: 0;
+    width: 0;   
     cursor: pointer;
 }
 

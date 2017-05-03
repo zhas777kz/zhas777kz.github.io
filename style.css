@@ -50,9 +50,7 @@ table {
 
 
 /*preloader*/
-#hellopreloader>p {
-	display:none;
-}
+
 #hellopreloader_preload {
 	display: block;
 	position: fixed;
@@ -66,28 +64,19 @@ table {
 	background-size:150px;
 }
 
-/*fillpage*/
-.section{
-		text-align:center;
-	}
+/*fullpage*/
 
 .section{
 	background-size: cover;
 }
 
-#section0{
-	background-image: url(scow-1403262_1920.jpg) ;
+#section0{ 
+	background: url(img/scow-1403262_1920.jpg); 
+	background-size: cover;
 }
 
-#section0::before{
-	content: '';
-    background: radial-gradient(#2E3037, #282A2F);
-    opacity: 0.8;
-    height:100%;
-    position:fixed;
-    width:100%;
-   	top:0;
-    left:0;
+#section8{
+	display: flex;
 }
 	
 /*мои стили*/
@@ -96,6 +85,7 @@ body{
 	color: #fff;
 	font-size: 14px;
 	font-family: 'Exo 2', sans-serif; 
+	font-weight: 300;
 }
 
 h1, h2, h3{
@@ -105,98 +95,220 @@ h1, h2, h3{
 }
 
 h2{
+	width: 300px;
 	text-align: left;
-	border-bottom: 2px solid #FC5F45;
-	padding-bottom: 15px;
-	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
 }
 
+h2 .number{
+	width: 25%;
+	border-bottom: 2px solid red;
+	font-size: 14px;
+	display: block;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	font-weight: 600;
+	margin-top: 0 !important;
+}
+
+
+a{
+	text-decoration: none;
+}
 
 .container{
 	width: 75%;
 	height: 88%;
 	margin: 0 auto;
-	/*background: red;*/
+	/*background: green;*/
 	display: flex;
 	flex-direction: column;
 }
-/*о компании*/
-.container .company-h2{
-	width: 20%;
+
+/*главная*/
+
+.logo{
+	width: 75%;
+	margin: 0 auto;
+	font-weight: 600;
 }
 
-.container .company-p{
-	text-align: left;
-	width: 70%;
-	margin-bottom: 20px;
+.container .home-h2 .number{
+	border-bottom: 2px solid #E9573E;
+	margin: 0;
 }
-.company-wrapper{
-	width: 100%;
-	height: 85%;
+
+.container .home-wrapper{
+	
 	display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: 100%;
+	justify-content: center;
 }
 
-.company-text{
-	width: 50%;
-	height: 100%;
-	border: 1px solid #FC5F45;
+.container .home-wrapper h1{
+	margin-bottom: 15px;
 }
 
-.company-img{
-	width: 50%;
+.container .home-wrapper p{
+	line-height: 20px;
+}
+
+.container .home-wrapper a{
+	color: #E9573E;
+	text-transform: uppercase;
+	margin-top: 30px;	
+	border: 2px solid #E9573E;
+	border-radius: 2px;
+	width: 150px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .home-wrapper a:hover{
+	background-color: #E9573E;
+	color: #fff;
+}
+
+/*о компании*/
+
+.container .company-h2 .number{
+	border-bottom: 2px solid #ED5564;
+}
+
+.container .company-wrapper{
+	width: 100%;
 	height: 100%;
-	background: url(CIMG1724.JPG.jpg) center center no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .company-wrapper .company-text{
+	width: 40%;
+	height: 70%;
+	border: 2px solid #DB4453;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+}
+
+.container .company-wrapper .company-text h3{
+	margin-bottom: 15px;
+}
+
+.container .company-wrapper .company-img{
+	width: 60%;
+	height: 90%;
+	background: url(img/CIMG1724.JPG.jpg) center center no-repeat;
+	background-color: 
 	background-size: cover;
 		
 }
 
-
-/*контакты*/
-
-.container .contact-h2{
-	width: 16%;
+/*каталог*/
+.container .catalog-h2 .number{
+	border-bottom: 2px solid #F6BB43;
 }
-.contact-wrapper{
-	width: 100%;
-	height: 85%;
-	display: flex;
-	background: #282A2F;
+.tabs_box {
+   	width: 100%;
+ 	height: 100%; 
+    background: #fff;
+ 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+ 	display: flex;
+}
+ 
+#tab2, #tab3 {
+    display: none;
+}
+ 
+.tab {
+    width: 100%;
+    height: 100%;
+}
+ 
+.tabs_menu {
+    display: table-row;
+}
+ 
+.tabs_menu li {
+    display: table-cell;
+    width: auto;
+}
+ 
+.tabs_menu li a {
+    display: table-cell;
+    width: 2000px;
+    text-align: center;
+    text-decoration: none;
+    background: #f8f8f8;
+    color: #292929;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 10px 0;
+}
+ 
+.tabs_menu li:first-child a {
+    border-left: 0;
+}
+ 
+.tabs_menu .active {
+    background: #5f84c1;
+    color: #fff;
+}
+/*контакты*/
+.contact-text .contact-h2 .number{
+	border-bottom: 2px solid #5D9CEC;
+	margin-left: 0;
 }
 
 .contact-text{
-	width: 30%;
-	height: 100%;
 	text-align: left;
-	background: #282a2f;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	background: rgba(46, 48, 55, 1);
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color:#aaa;
+	color: #fff;
+	border: 3px solid #5D9CEC;
+	box-shadow: 0 0 10px rgba(46, 48, 55, 0.5);
 }
 
-.container .contact-wrapper .contact-text h3{
-	font-size: 20px;
+.contact-text h3{
+	font-size: 15px;
+	color:#5D9CEC;
+	margin-left: 30px;
 }
-.container .contact-wrapper .contact-text p{
+.contact-text p{
 	margin-top: 12px;
+	margin-left: 30px;
+	color: #fff;
 }
 
-.container .contact-wrapper .contact-text p strong{
-	font-weight: 600;
-	margin-bottom: 5px;
+.contact-text p strong{
+	font-weight: 400;
+	margin-bottom: 7px;
 	display: inline-block;
 }
 
-.container .contact-wrapper .contact-text .magazine{
+.contact-text .magazine{
 	margin-top: 25px;
 }
 
 .contact-map{
-	width: 70%;
+	position: absolute;
+	width: 100%;
 	height: 100%;
-	opacity: 0.8;
-	
+	opacity: 0.7;
 }
 
 [class*="ymaps-2"][class*="-ground-pane"] {

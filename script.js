@@ -12,8 +12,18 @@ function fadeOutnojquery(el){
     setTimeout(function(){
       fadeOutnojquery(hellopreloader);},1000);};
 
-
-    /*яндекс карты*/
+/*табы*/
+$(document).ready(function(){
+    $('.tabs_menu a').click(function(e) {
+        e.preventDefault();
+        $('.tabs_menu .active').removeClass('active');
+        $(this).addClass('active');
+        var tab = $(this).attr('href');
+        $('.tab').not(tab).css({'display':'none'});
+        $(tab).fadeIn(400);
+    });
+});
+/*яндекс карты*/
 
 ymaps.ready(init);
     var myMap,
@@ -22,7 +32,7 @@ ymaps.ready(init);
 
     function init(){     
         myMap = new ymaps.Map("map", {
-            center: [53.22095249, 63.61825563],
+            center: [53.22115854, 63.61327745],
             zoom: 15.5,
             controls: ['zoomControl']
         });
