@@ -13,15 +13,17 @@ function fadeOutnojquery(el){
       fadeOutnojquery(hellopreloader);},1000);};
 
 /*табы*/
-$(document).ready(function(){
-    $('.tabs_menu a').click(function(e) {
-        e.preventDefault();
-        $('.tabs_menu .active').removeClass('active');
-        $(this).addClass('active');
-        var tab = $(this).attr('href');
-        $('.tab').not(tab).css({'display':'none'});
-        $(tab).fadeIn(400);
-    });
+$(function () {
+    var tabContainers = $('div.tabs > div'); // получаем массив контейнеров
+    tabContainers.hide().filter(':first').show(); // прячем все, кроме первого
+    // далее обрабатывается клик по вкладке
+    $('div.tabs ul.tabNavigation a').click(function () {
+        tabContainers.hide(); // прячем все табы
+        tabContainers.filter(this.hash).show(); // показываем содержимое текущего
+        $('div.tabs ul.tabNavigation a').removeClass('selected'); // у всех убираем класс 'selected'
+        $(this).addClass('selected'); // текушей вкладке добавляем класс 'selected'
+        return false;
+    }).filter(':first').click();
 });
 /*яндекс карты*/
 
